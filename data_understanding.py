@@ -2,6 +2,7 @@
 # import some packages
 import pandas as pd
 import matplotlib.pyplot as plt
+import seaborn as sb
 import seaborn as sns
 
 # creat a pandas Data Frame from training data
@@ -16,3 +17,30 @@ data_header = {0: 'Engine', 1: 'Cycle', 2: 'Altitude', 3: 'MachNumber', 4: 'TRA'
 df = df.rename(columns=data_header)
 
 describe = df.describe()
+
+# %%
+# plot a histogram for each sensor
+fig = plt.figure(figsize=[15, 20])
+sensor_number = 1
+
+for param in df.columns[5:26]:
+    sbp = plt.subplot(7, 3, sensor_number)
+    df[param].hist()
+    sbp.set_title(param)
+    plt.tight_layout()
+    sensor_number += 1
+
+plt.show()
+#%%
+# selecting only the sensor data
+sensor_data = df.iloc[:,5:26] # df.iloc[rows,columns]
+
+# only evaluate correlations on sensor data that is not constant
+sensor_data = sensor_data.drop(['T2', 'P2', 'P15', 'epr', 'farB', 'Nf_dmd', 'PCNfR_dmd'], axis=1)
+correlation = sensor_data.corr(method='pearson')
+#%%
+# creating a heatmap with seaborn package
+fig = plt.figure(figsize=[10,10])
+sb.heatmap(correlation, vmin=-1, vmax=1, center=0, cmap='seismic', annot=True)
+
+plt.show()
