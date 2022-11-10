@@ -112,17 +112,18 @@ for jj in range(1, 1+n_engines):
     plt.ylabel('phi')
 #%%
 # scatter plots to visualize the correlation between the sensors and the RUL
+fig, (ax1, ax2) = plt.subplots(2, 1)
 
-plt.figure()
-plt.scatter(df_rul['Ps30'], df_rul['RUL'])
-plt.xlabel('Ps30')
-plt.ylabel('RUL')
+ax1.scatter(df_rul['Ps30'], df_rul['RUL'])
+ax1.set_xlabel('Ps30')
+ax1.set_ylabel('RUL')
 
+ax2.scatter(df_rul['phi'], df_rul['RUL'])
+ax2.set_xlabel('phi')
+ax2.set_ylabel('RUL')
 
-plt.figure()
-plt.scatter(df_rul['phi'], df_rul['RUL'])
-plt.xlabel('phi')
-plt.ylabel('RUL')
+plt.tight_layout()
+plt.show()
 #%%
 # correlation for the first 100 cycles for sensor Ps30
 df_rul_start = df_rul[df_rul['Cycle'] <= 100]
