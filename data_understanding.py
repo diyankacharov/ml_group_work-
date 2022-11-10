@@ -2,7 +2,6 @@
 # import some packages
 import pandas as pd
 import matplotlib.pyplot as plt
-import seaborn as sb
 import seaborn as sns
 
 # creat a pandas Data Frame from training data
@@ -40,8 +39,8 @@ sensor_data = sensor_data.drop(['T2', 'P2', 'P15', 'epr', 'farB', 'Nf_dmd', 'PCN
 correlation = sensor_data.corr(method='pearson')
 #%%
 # creating a heatmap with seaborn package
-fig = plt.figure(figsize=[10, 10])
-sb.heatmap(correlation, vmin=-1, vmax=1, center=0, cmap='seismic', annot=True)
+fig = plt.figure(figsize=[12, 10])
+sns.heatmap(correlation, vmin=-1, vmax=1, center=0, cmap='seismic', annot=True)
 
 plt.show()
 #%%
