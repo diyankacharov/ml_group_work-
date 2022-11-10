@@ -1,6 +1,4 @@
-# ml_group_work
-
-
+# Machien Learning Group Work
 
 ## Getting started
 
