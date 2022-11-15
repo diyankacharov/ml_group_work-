@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="56e5a229-b669-4df2-851d-72af3bff7bd1" name="Changes" comment="added some Cheat Sheets">
+    <list default="true" id="56e5a229-b669-4df2-851d-72af3bff7bd1" name="Changes" comment="linked train data from gitlab">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Excercise1.py" beforeDir="false" afterPath="$PROJECT_DIR$/Excercise1.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +86,7 @@
       <updated>1668098975776</updated>
       <workItem from="1668098977289" duration="7308000" />
       <workItem from="1668163033708" duration="6903000" />
-      <workItem from="1668514307154" duration="1196000" />
+      <workItem from="1668514307154" duration="2418000" />
     </task>
     <task id="LOCAL-00001" summary="Adding some initial files and creating a pandas data frame">
       <created>1668100308579</created>
@@ -145,7 +144,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668514175062</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="linked train data from gitlab">
+      <created>1668515770806</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1668515770807</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -183,6 +189,7 @@
     <MESSAGE value="changed scatter plots" />
     <MESSAGE value="added some Cheat Sheets" />
     <MESSAGE value="added some .xml files" />
-    <option name="LAST_COMMIT_MESSAGE" value="added some .xml files" />
+    <MESSAGE value="linked train data from gitlab" />
+    <option name="LAST_COMMIT_MESSAGE" value="linked train data from gitlab" />
   </component>
 </project>
