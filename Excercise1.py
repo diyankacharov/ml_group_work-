@@ -2,8 +2,11 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 
+#%%
 # read text file
-data = pd.read_csv("data.txt", sep=" ", header=None,
+url = 'https://git.rwth-aachen.de/jonas.schulte/ml_group_work/-/raw/LsgNicholas/Data/train_FD001.txt'
+
+data = pd.read_csv(url, sep=" ", header=None,
                    names=["Engine", "Cycle", "Altitude", "MachNumber", "TRA", "T2", "T24", "T30", "T50", "P2", "P15",
                           "P30", "Nf", "Nc", "epr", "Ps30", "phi", "NRf", "NRc", "BPR", "farB", "htBleed", "Nf_dmd",
                           "PCNfR_dmd", "W31", "W32", "NaN", "NaN2"])
@@ -11,8 +14,8 @@ data = pd.read_csv("data.txt", sep=" ", header=None,
 
 # print out data as well as basic statistical information
 # print(data.describe(percentiles=[.25, .5, .75]))
-# print(data)
-
+print(data)
+#%%
 # create a second data frame which only includes the operating conditions
 # op_conditions = data[["Engine", "Cycle", "Altitude", "MachNumber", "TRA"]]
 
